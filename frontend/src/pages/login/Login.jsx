@@ -14,9 +14,10 @@ const Login = () => {
 	};
 
 	return (
-		<div className='flex flex-col items-center justify-center min-w-96 mx-auto'>
-			<div className='w-full p-6 rounded-lg shadow-md bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0'>
-				<h1 className='text-3xl font-semibold text-center text-gray-300'>
+		<div className='min-h-svh flex items-center justify-center px-4 sm:px-6 lg:px-8 py-10 sm:py-10 overflow-y-auto'>
+			<div className='w-full sm:min-w-96 overflow-x-auto rounded-xl shadow-md bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0
+            p-6 sm:p-6 md:p-8 overflow-auto max-h-[85vh]'>
+				<h1 className='text-center font-semibold text-gray-300 text-3xl'>
 					Login
 					<span className='text-blue-500'> Namaste!</span>
 				</h1>
@@ -24,12 +25,12 @@ const Login = () => {
 				<form onSubmit={handleSubmit}>
 					<div>
 						<label className='label p-2'>
-							<span className='text-base label-text'>User Name</span>
+							<span className='text-sm sm:text-base label-text'>User Name</span>
 						</label>
 						<input
 							type='text'
 							placeholder='Enter username'
-							className='w-full input input-bordered h-10'
+							className='w-full input input-bordered h-11'
 							value={username}
 							onChange={(e) => setUsername(e.target.value)}
 						/>
@@ -37,12 +38,12 @@ const Login = () => {
 
 					<div>
 						<label className='label'>
-							<span className='text-base label-text'>Password</span>
+							<span className='text-sm sm:text-base label-text'>Password</span>
 						</label>
 						<input
 							type='password'
 							placeholder='Enter Password'
-							className='w-full input input-bordered h-10'
+							className='w-full input input-bordered h-11'
 							value={password}
 							onChange={(e) => setPassword(e.target.value)}
 						/>
